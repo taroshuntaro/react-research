@@ -1,3 +1,9 @@
 {
-  "presets": ["react-app"]
+  "presets": [
+    ["react-app", {
+      "production": {
+        "plugins": ["transform-react-constant-elements"]
+      }
+    }]
+  ]
 }
