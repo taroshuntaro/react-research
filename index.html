@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>sample react</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- Download from https://ja.reactjs.org/docs/cdn-links.html -->
+    <script src="js/lib/react.16.12.0.development.js"></script>
+    <script src="js/lib/react-dom.16.12.0.development.js"></script>
+    <!-- Download from https://babeljs.io/en/setup/#installation -->
+    <script src="js/lib/babel_standalone_7.7.7_babel.min.js"></script>
+    <script type="text/babel">
+      class App extends React.Component {
+        render() {
+          return <div>Hello World</div>;
+        }
+      }
+
+      ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+  </body>
+</html>
