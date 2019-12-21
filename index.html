@@ -14,11 +14,9 @@
     <!-- Download from https://babeljs.io/en/setup/#installation -->
     <script src="js/lib/babel_standalone_7.7.7_babel.min.js"></script>
     <script type="text/babel">
-      class App extends React.Component {
-        render() {
-          return <div>Hello World</div>;
-        }
-      }
+      const App = () => {
+        return <h1>Hello</h1>;
+      };
 
       ReactDOM.render(<App />, document.getElementById('root'));
     </script>
