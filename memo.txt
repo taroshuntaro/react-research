@@ -1,0 +1,3 @@
+npm install @babel/core @babel/cli @babel/preset-env @babel/preset-react
+
+npx babel --watch src --out-dir js/components --presets @babel/preset-react
