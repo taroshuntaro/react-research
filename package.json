@@ -2,9 +2,9 @@
   "name": "react-research",
   "version": "1.0.0",
   "description": "react research project",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "http-server -o"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,7 @@
     "@babel/cli": "^7.7.7",
     "@babel/core": "^7.7.7",
     "@babel/preset-env": "^7.7.7",
-    "@babel/preset-react": "^7.7.4"
+    "@babel/preset-react": "^7.7.4",
+    "http-server": "^0.12.0"
   }
 }
