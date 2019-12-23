@@ -1,7 +1,9 @@
-import React from "react";
+define(function(require, exports, module) {
+  const React = require("react");
 
-const Box = () => {
-  return <div className="box">Box 1</div>;
-};
+  const Box = () => {
+    return <div className="box">Box 1</div>;
+  };
 
-export default Box;
+  module.exports = Box;
+});
