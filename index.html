@@ -9,20 +9,17 @@
   <body>
     <div id="root"></div>
     <!-- React & React DOM download from https://ja.reactjs.org/docs/cdn-links.html -->
-    <!-- script src="js/lib/react.16.12.0.development.js"></script -->
-    <!-- script src="js/lib/react-dom.16.12.0.development.js"></script -->
-    <!-- script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script -->
     <!-- script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script -->
     <!-- RequireJS download from https://requirejs.org/docs/download.html#requirejs -->
     <script>
       var require = {
-        baseUrl: 'js',
+        baseUrl: "js",
         paths: {
-          'react': "lib/react.16.12.0.development",
-          'react-dom': "lib/react-dom.16.12.0.development"
+          "react": "lib/react_16.12.0_development",
+          "react-dom": "lib/react-dom_16.12.0_development"
         },
         deps: ["components/App"],
-        callback: function(App){}
+        callback: function(App) {}
       };
     </script>
     <script src="js/lib/require_2.3.6.js"></script>
