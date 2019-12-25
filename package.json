@@ -4,7 +4,8 @@
   "description": "react research project",
   "main": "index.html",
   "scripts": {
-    "start": "http-server -o"
+    "start": "http-server -o",
+    "watch-babel": "sh watch-babel.sh"
   },
   "repository": {
     "type": "git",
