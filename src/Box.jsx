@@ -1,8 +1,12 @@
 define(function(require, exports, module) {
   const React = require("react");
 
-  const Box = () => {
-    return <div className="box">Box 1</div>;
+  const Box = props => {
+    return (
+      <div className="box">
+        <p>{props.date}</p>
+      </div>
+    );
   };
 
   module.exports = Box;

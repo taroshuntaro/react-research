@@ -3,10 +3,10 @@
 define(function (require, exports, module) {
   var React = require("react");
 
-  var Box = function Box() {
+  var Box = function Box(props) {
     return React.createElement("div", {
       className: "box"
-    }, "Box 1");
+    }, React.createElement("p", null, props.date));
   };
 
   module.exports = Box;

@@ -9,13 +9,15 @@
   <body>
     <div id="root"></div>
     <!-- React & React DOM download from https://ja.reactjs.org/docs/cdn-links.html -->
+    <!-- es6-promise download from https://cdn.jsdelivr.net/npm/es6-promise@4.2.8/dist/ -->
     <!-- RequireJS download from https://requirejs.org/docs/download.html#requirejs -->
     <script>
       var require = {
         baseUrl: "js",
         paths: {
           "react": "lib/react_16.12.0_development",
-          "react-dom": "lib/react-dom_16.12.0_development"
+          "react-dom": "lib/react-dom_16.12.0_development",
+          "es6-promise/auto": "lib/es6-promise_4.2.8_auto"
         },
         deps: ["components/App"],
         callback: function(App) {}
