@@ -9,14 +9,18 @@ define(function (require, exports, module) {
 
   var Promise = require("es6-promise/auto");
 
-  var result = new Promise(function (resolve) {
-    resolve(new Date());
+  var result = new Promise(function (resolve, reject) {
+    setTimeout(function () {
+      resolve(new Date());
+    }, 1000);
   });
-  console.log(result._result.getDate());
+  result.then(function (value) {
+    console.log(value);
+  });
 
   var App = function App() {
     return React.createElement("div", null, React.createElement("h1", null, "Hello."), React.createElement(Box, {
-      date: result._result.getDate()
+      date: "xxxx"
     }));
   };
 

@@ -5,16 +5,21 @@ define(function(require, exports, module) {
 
   const Promise = require("es6-promise/auto");
 
-  let result = new Promise(function(resolve) {
-    resolve(new Date());
+  let result = new Promise((resolve, reject) => {
+    setTimeout(function(){
+      resolve(new Date());
+    }, 1000);
   });
-  console.log(result._result.getDate());
+
+  result.then((value) => {
+    console.log(value);
+  });
 
   const App = () => {
     return (
       <div>
         <h1>Hello.</h1>
-        <Box date={result._result.getDate()} />
+        <Box date="xxxx" />
       </div>
     );
   };
