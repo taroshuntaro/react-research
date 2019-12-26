@@ -1,19 +1,7 @@
 define(function(require, exports, module) {
   const React = require("react");
   const ReactDOM = require("react-dom");
-  const Box = require("components/Box");
-
-  const Promise = require("es6-promise/auto");
-
-  let result = new Promise((resolve, reject) => {
-    setTimeout(function(){
-      resolve(new Date());
-    }, 1000);
-  });
-
-  result.then((value) => {
-    console.log(value);
-  });
+  const Box = require("Box");
 
   const App = () => {
     return (
@@ -25,4 +13,19 @@ define(function(require, exports, module) {
   };
 
   ReactDOM.render(<App />, document.getElementById("root"));
+
+  /**
+   * promise example code
+   */
+  const Promise = require("es6-promise/auto");
+
+  let result = new Promise((resolve, reject) => {
+    setTimeout(function() {
+      resolve(new Date());
+    }, 1000);
+  });
+
+  result.then(value => {
+    console.log(value);
+  });
 });
