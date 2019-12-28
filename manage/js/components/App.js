@@ -5,11 +5,18 @@ define(function (require, exports, module) {
 
   var ReactDOM = require("react-dom");
 
-  var Box = require("components/Box");
+  var Box = require("./Box");
+
+  var List = require("./List");
 
   var App = function App() {
-    return React.createElement("div", null, React.createElement("h1", null, "Hello."), React.createElement(Box, {
-      date: "xxxx"
+    var numbers = [1, 2, 3, 4, 5];
+    return React.createElement("div", {
+      className: "app"
+    }, React.createElement("h1", null, "Hello."), React.createElement(Box, {
+      date: "Hello World!"
+    }), React.createElement(List, {
+      numbers: numbers
     }));
   };
 

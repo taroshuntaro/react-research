@@ -1,13 +1,16 @@
 define(function(require, exports, module) {
   const React = require("react");
   const ReactDOM = require("react-dom");
-  const Box = require("Box");
+  const Box = require("./Box");
+  const List = require("./List");
 
   const App = () => {
+    const numbers = [1, 2, 3, 4, 5];
     return (
-      <div>
+      <div className="app">
         <h1>Hello.</h1>
-        <Box date="xxxx" />
+        <Box date="Hello World!" />
+        <List numbers={numbers} />
       </div>
     );
   };
