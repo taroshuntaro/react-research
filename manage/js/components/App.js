@@ -5,34 +5,17 @@ define(function (require, exports, module) {
 
   var ReactDOM = require("react-dom");
 
-  var Box = require("./Box");
-
-  var List = require("./List");
+  var Sample = require("./Sample");
 
   var App = function App() {
-    var numbers = [1, 2, 3, 4, 5];
     return React.createElement("div", {
-      className: "app"
-    }, React.createElement("h1", null, "Hello."), React.createElement(Box, {
-      date: "Hello World!"
-    }), React.createElement(List, {
-      numbers: numbers
-    }));
+      className: "app container"
+    }, React.createElement("h1", {
+      className: "display-1"
+    }, "Hello World!", React.createElement("span", {
+      className: "badge badge-secondary"
+    }, "New")), React.createElement(Sample, null));
   };
 
   ReactDOM.render(React.createElement(App, null), document.getElementById("root"));
-  /**
-   * promise example code
-   */
-
-  var Promise = require("es6-promise/auto");
-
-  var result = new Promise(function (resolve, reject) {
-    setTimeout(function () {
-      resolve(new Date());
-    }, 1000);
-  });
-  result.then(function (value) {
-    console.log(value);
-  });
 });
