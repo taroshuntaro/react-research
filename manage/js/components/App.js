@@ -7,6 +7,8 @@ define(function (require, exports, module) {
 
   var Sample = require("./Sample");
 
+  var Card = require("./Card");
+
   var App = function App() {
     return React.createElement("div", {
       className: "app container"

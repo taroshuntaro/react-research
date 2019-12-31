@@ -2,6 +2,7 @@ define(function(require, exports, module) {
   const React = require("react");
   const ReactDOM = require("react-dom");
   const Sample = require("./Sample");
+  const Card = require("./Card");
 
   const App = () => {
     return (
