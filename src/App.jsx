@@ -17,29 +17,56 @@ define(function(require, exports, module) {
       Aboutページです
     </div>
   );
+  const Test = () => (
+    <div>
+      <h2>Test</h2>
+      Testページです
+    </div>
+  );
 
   const App = () => {
     return (
       <div className="app container">
-        <h1 className="display-1">
-          Hello World!
-          <span className="badge badge-secondary">New</span>
-        </h1>
+        <h1>Title</h1>
         <HashRouter>
-          <div className="list container">
-            <ul className="list-group">
-              <li className="list-group-item">
-                <Link to="/home">Home</Link>
-              </li>
-              <li className="list-group-item">
-                <Link to="/about">About</Link>
-              </li>
-            </ul>
-          </div>
-          <div className="container">
-            <Route path="/home" component={Home} />
-            <Route path="/about" component={About} />
-          </div>
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <Link to="/" className="navbar-brand">
+              Navbar
+            </Link>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <Link to="/home" className="nav-link">
+                    Home
+                  </Link>
+                </li>
+                <li class="nav-item">
+                  <Link to="/about" className="nav-link">
+                    About
+                  </Link>
+                </li>
+                <li class="nav-item">
+                  <Link to="/test" className="nav-link">
+                    Test
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <Route path="/home" component={Home} />
+          <Route path="/about" component={About} />
+          <Route path="/test" component={Test} />
         </HashRouter>
       </div>
     );
