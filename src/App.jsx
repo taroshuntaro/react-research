@@ -5,36 +5,41 @@ define(function(require, exports, module) {
   const Route = require("react-router-dom").Route;
   const Link = require("react-router-dom").Link;
 
-  const Home = () => (
-    <div>
-      <h2>Home</h2>
-      Homeページです
-    </div>
-  );
-  const About = () => (
-    <div>
-      <h2>About</h2>
-      Aboutページです
-    </div>
-  );
-  const Test = () => (
-    <div>
-      <h2>Test</h2>
-      Testページです
-    </div>
-  );
+  const Sample = require("./Sample");
+  const Card = require("./Card");
 
   const App = () => {
+    const tweetListJSON = [
+      {
+        id: "1",
+        account_name: "taroshuntaro",
+        account_id: "taroshuntaro",
+        text: "Hello World."
+      },
+      {
+        id: "2",
+        account_name: "sample01",
+        account_id: "sample01",
+        text: "Hello Hello Hello."
+      },
+      {
+        id: "3",
+        account_name: "sample02",
+        account_id: "sample02",
+        text: "Hello Hello Hello."
+      }
+    ];
+
     return (
       <div className="app container">
-        <h1>Title</h1>
+        <h1>Sample React App</h1>
         <HashRouter>
-          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <Link to="/" className="navbar-brand">
               Navbar
             </Link>
             <button
-              class="navbar-toggler"
+              className="navbar-toggler"
               type="button"
               data-toggle="collapse"
               data-target="#navbarNav"
@@ -42,31 +47,28 @@ define(function(require, exports, module) {
               aria-expanded="false"
               aria-label="Toggle navigation"
             >
-              <span class="navbar-toggler-icon"></span>
+              <span className="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <Link to="/home" className="nav-link">
-                    Home
+            <div className="collapse navbar-collapse" id="navbarNav">
+              <ul className="navbar-nav">
+                <li className="nav-item">
+                  <Link to="/sample" className="nav-link">
+                    Sample
                   </Link>
                 </li>
-                <li class="nav-item">
-                  <Link to="/about" className="nav-link">
-                    About
-                  </Link>
-                </li>
-                <li class="nav-item">
-                  <Link to="/test" className="nav-link">
-                    Test
+                <li className="nav-item">
+                  <Link to="/card" className="nav-link">
+                    Card
                   </Link>
                 </li>
               </ul>
             </div>
           </nav>
-          <Route path="/home" component={Home} />
-          <Route path="/about" component={About} />
-          <Route path="/test" component={Test} />
+          <Route path="/sample" render={() => <Sample />} />
+          <Route
+            path="/card"
+            render={() => <Card tweetList={tweetListJSON} />}
+          />
         </HashRouter>
       </div>
     );

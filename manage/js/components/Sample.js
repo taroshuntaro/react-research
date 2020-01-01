@@ -31,7 +31,9 @@ define(function (require, exports, module) {
 
 
   var Sample = function Sample() {
-    return React.createElement("div", null, React.createElement(Box, {
+    return React.createElement("div", {
+      className: "container"
+    }, React.createElement("h2", null, "Sample"), React.createElement(Box, {
       text: "sample project."
     }), React.createElement(NumberList, null));
   };

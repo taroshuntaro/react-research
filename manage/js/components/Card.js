@@ -8,7 +8,7 @@ define(function (require, exports, module) {
     var items = tweetList.map(function (tweet) {
       return React.createElement("li", {
         className: "list-group-item",
-        key: tweet.id.toString()
+        key: tweet.id
       }, React.createElement("div", {
         className: "card",
         style: {
@@ -18,17 +18,19 @@ define(function (require, exports, module) {
         className: "card-body"
       }, React.createElement("h5", {
         className: "card-title"
-      }, props.name), React.createElement("h6", {
+      }, tweet.account_name), React.createElement("h6", {
         className: "card-subtitle mb-2 text-muted"
-      }, props.id), React.createElement("p", {
+      }, tweet.account_id), React.createElement("p", {
         className: "card-text"
-      }, props.text))));
+      }, tweet.text))));
     });
     return React.createElement("div", {
+      className: "container"
+    }, React.createElement("h2", null, "Card"), React.createElement("div", {
       className: "list container"
     }, React.createElement("ul", {
       className: "list-group"
-    }, items));
+    }, items)));
   };
 
   module.exports = Card;

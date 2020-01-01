@@ -29,7 +29,8 @@ define(function(require, exports, module) {
   /* Sample Components */
   const Sample = () => {
     return (
-      <div>
+      <div className="container">
+        <h2>Sample</h2>
         <Box text="sample project." />
         <NumberList />
       </div>
