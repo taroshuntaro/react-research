@@ -9,6 +9,8 @@ define(function (require, exports, module) {
 
   var Route = require("react-router-dom").Route;
 
+  var Switch = require("react-router-dom").Switch;
+
   var Link = require("react-router-dom").Link;
 
   var Sample = require("./Sample");
@@ -16,22 +18,6 @@ define(function (require, exports, module) {
   var Card = require("./Card");
 
   var App = function App() {
-    var tweetListJSON = [{
-      id: "1",
-      account_name: "taroshuntaro",
-      account_id: "taroshuntaro",
-      text: "Hello World."
-    }, {
-      id: "2",
-      account_name: "sample01",
-      account_id: "sample01",
-      text: "Hello Hello Hello."
-    }, {
-      id: "3",
-      account_name: "sample02",
-      account_id: "sample02",
-      text: "Hello Hello Hello."
-    }];
     return React.createElement("div", {
       className: "app container"
     }, React.createElement("h1", null, "Sample React App"), React.createElement(HashRouter, null, React.createElement("nav", {
@@ -64,19 +50,15 @@ define(function (require, exports, module) {
     }, React.createElement(Link, {
       to: "/card",
       className: "nav-link"
-    }, "Card"))))), React.createElement(Route, {
+    }, "Card"))))), React.createElement(Switch, null, React.createElement(Route, {
       path: "/sample",
-      render: function render() {
-        return React.createElement(Sample, null);
-      }
+      exact: true,
+      children: React.createElement(Sample, null)
     }), React.createElement(Route, {
       path: "/card",
-      render: function render() {
-        return React.createElement(Card, {
-          tweetList: tweetListJSON
-        });
-      }
-    })));
+      exact: true,
+      children: React.createElement(Card, null)
+    }))));
   };
 
   ReactDOM.render(React.createElement(App, null), document.getElementById("root"));

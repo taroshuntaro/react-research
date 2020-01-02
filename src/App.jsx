@@ -3,33 +3,13 @@ define(function(require, exports, module) {
   const ReactDOM = require("react-dom");
   const HashRouter = require("react-router-dom").HashRouter;
   const Route = require("react-router-dom").Route;
+  const Switch = require("react-router-dom").Switch;
   const Link = require("react-router-dom").Link;
 
   const Sample = require("./Sample");
   const Card = require("./Card");
 
   const App = () => {
-    const tweetListJSON = [
-      {
-        id: "1",
-        account_name: "taroshuntaro",
-        account_id: "taroshuntaro",
-        text: "Hello World."
-      },
-      {
-        id: "2",
-        account_name: "sample01",
-        account_id: "sample01",
-        text: "Hello Hello Hello."
-      },
-      {
-        id: "3",
-        account_name: "sample02",
-        account_id: "sample02",
-        text: "Hello Hello Hello."
-      }
-    ];
-
     return (
       <div className="app container">
         <h1>Sample React App</h1>
@@ -64,11 +44,10 @@ define(function(require, exports, module) {
               </ul>
             </div>
           </nav>
-          <Route path="/sample" render={() => <Sample />} />
-          <Route
-            path="/card"
-            render={() => <Card tweetList={tweetListJSON} />}
-          />
+          <Switch>
+            <Route path="/sample" exact children={<Sample />} />
+            <Route path="/card" exact children={<Card />} />
+          </Switch>
         </HashRouter>
       </div>
     );
