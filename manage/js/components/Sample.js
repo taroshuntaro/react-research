@@ -1,7 +1,7 @@
 "use strict";
 
 define(function (require, exports, module) {
-  var React = require("react");
+  var React = require('react');
   /* Box components */
 
 

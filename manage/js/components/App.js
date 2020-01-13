@@ -1,21 +1,21 @@
 "use strict";
 
 define(function (require, exports, module) {
-  var React = require("react");
+  var React = require('react');
 
-  var ReactDOM = require("react-dom");
+  var ReactDOM = require('react-dom');
 
-  var HashRouter = require("react-router-dom").HashRouter;
+  var HashRouter = require('react-router-dom').HashRouter;
 
-  var Route = require("react-router-dom").Route;
+  var Route = require('react-router-dom').Route;
 
-  var Switch = require("react-router-dom").Switch;
+  var Switch = require('react-router-dom').Switch;
 
-  var Link = require("react-router-dom").Link;
+  var Link = require('react-router-dom').Link;
 
-  var Sample = require("./Sample");
+  var Sample = require('./Sample');
 
-  var Card = require("./Card");
+  var Card = require('./Card');
 
   var App = function App() {
     return React.createElement("div", {
@@ -61,5 +61,5 @@ define(function (require, exports, module) {
     }))));
   };
 
-  ReactDOM.render(React.createElement(App, null), document.getElementById("root"));
+  ReactDOM.render(React.createElement(App, null), document.getElementById('root'));
 });

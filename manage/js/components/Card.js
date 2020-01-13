@@ -1,24 +1,24 @@
 "use strict";
 
 define(function (require, exports, module) {
-  var React = require("react");
+  var React = require('react');
 
   var Card = function Card() {
     var tweetList = [{
-      id: "1",
-      account_name: "taroshuntaro",
-      account_id: "taroshuntaro",
-      text: "Hello World."
+      id: '1',
+      account_name: 'taroshuntaro',
+      account_id: 'taroshuntaro',
+      text: 'Hello World.'
     }, {
-      id: "2",
-      account_name: "sample01",
-      account_id: "sample01",
-      text: "Hello Hello Hello."
+      id: '2',
+      account_name: 'sample01',
+      account_id: 'sample01',
+      text: 'Hello Hello Hello.'
     }, {
-      id: "3",
-      account_name: "sample02",
-      account_id: "sample02",
-      text: "Hello Hello Hello."
+      id: '3',
+      account_name: 'sample02',
+      account_id: 'sample02',
+      text: 'Hello Hello Hello.'
     }];
     var items = tweetList.map(function (tweet) {
       return React.createElement("li", {
@@ -27,7 +27,7 @@ define(function (require, exports, module) {
       }, React.createElement("div", {
         className: "card",
         style: {
-          margin: "5px"
+          margin: '5px'
         }
       }, React.createElement("div", {
         className: "card-body"
