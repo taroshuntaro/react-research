@@ -40,7 +40,7 @@ define(function (require, exports, module) {
       }, tweet.text))));
     });
     return React.createElement("div", {
-      className: "container"
+      className: "card container"
     }, React.createElement("h2", null, "Card"), React.createElement("div", {
       className: "list container"
     }, React.createElement("ul", {

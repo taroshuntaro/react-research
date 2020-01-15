@@ -17,10 +17,12 @@ define(function (require, exports, module) {
 
   var Card = require('./Card');
 
+  var Count = require('./Count');
+
   var App = function App() {
     return React.createElement("div", {
       className: "app container"
-    }, React.createElement("h1", null, "Sample React App"), React.createElement(HashRouter, null, React.createElement("nav", {
+    }, React.createElement("h1", null, "Sample"), React.createElement(HashRouter, null, React.createElement("nav", {
       className: "navbar navbar-expand-lg navbar-light bg-light"
     }, React.createElement(Link, {
       to: "/",
@@ -50,7 +52,12 @@ define(function (require, exports, module) {
     }, React.createElement(Link, {
       to: "/card",
       className: "nav-link"
-    }, "Card"))))), React.createElement(Switch, null, React.createElement(Route, {
+    }, "Card")), React.createElement("li", {
+      className: "nav-item"
+    }, React.createElement(Link, {
+      to: "/count",
+      className: "nav-link"
+    }, "Count"))))), React.createElement(Switch, null, React.createElement(Route, {
       path: "/sample",
       exact: true,
       children: React.createElement(Sample, null)
@@ -58,6 +65,10 @@ define(function (require, exports, module) {
       path: "/card",
       exact: true,
       children: React.createElement(Card, null)
+    }), React.createElement(Route, {
+      path: "/count",
+      exact: true,
+      children: React.createElement(Count, null)
     }))));
   };
 
