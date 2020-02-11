@@ -5,55 +5,40 @@ define(function(require, exports, module) {
   const Route = require('react-router-dom').Route;
   const Switch = require('react-router-dom').Switch;
   const Link = require('react-router-dom').Link;
-
   const Sample = require('./Sample');
-  const Card = require('./Card');
-  const Count = require('./Count');
 
   const App = () => {
     return (
-      <div className="app container">
+      <div className='app container'>
         <h1>Sample</h1>
         <HashRouter>
-          <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <Link to="/" className="navbar-brand">
+          <nav className='navbar navbar-expand-lg navbar-light bg-light'>
+            <Link to='/' className='navbar-brand'>
               Navbar
             </Link>
             <button
-              className="navbar-toggler"
-              type="button"
-              data-toggle="collapse"
-              data-target="#navbarNav"
-              aria-controls="navbarNav"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
+              className='navbar-toggler'
+              type='button'
+              data-toggle='collapse'
+              data-target='#navbarNav'
+              aria-controls='navbarNav'
+              aria-expanded='false'
+              aria-label='Toggle navigation'
             >
-              <span className="navbar-toggler-icon"></span>
+              <span className='navbar-toggler-icon'></span>
             </button>
-            <div className="collapse navbar-collapse" id="navbarNav">
-              <ul className="navbar-nav">
-                <li className="nav-item">
-                  <Link to="/sample" className="nav-link">
+            <div className='collapse navbar-collapse' id='navbarNav'>
+              <ul className='navbar-nav'>
+                <li className='nav-item'>
+                  <Link to='/sample' className='nav-link'>
                     Sample
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link to="/card" className="nav-link">
-                    Card
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link to="/count" className="nav-link">
-                    Count
                   </Link>
                 </li>
               </ul>
             </div>
           </nav>
           <Switch>
-            <Route path="/sample" exact children={<Sample />} />
-            <Route path="/card" exact children={<Card />} />
-            <Route path="/count" exact children={<Count />} />
+            <Route path='/sample' exact children={<Sample />} />
           </Switch>
         </HashRouter>
       </div>

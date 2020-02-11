@@ -15,10 +15,6 @@ define(function (require, exports, module) {
 
   var Sample = require('./Sample');
 
-  var Card = require('./Card');
-
-  var Count = require('./Count');
-
   var App = function App() {
     return React.createElement("div", {
       className: "app container"
@@ -47,28 +43,10 @@ define(function (require, exports, module) {
     }, React.createElement(Link, {
       to: "/sample",
       className: "nav-link"
-    }, "Sample")), React.createElement("li", {
-      className: "nav-item"
-    }, React.createElement(Link, {
-      to: "/card",
-      className: "nav-link"
-    }, "Card")), React.createElement("li", {
-      className: "nav-item"
-    }, React.createElement(Link, {
-      to: "/count",
-      className: "nav-link"
-    }, "Count"))))), React.createElement(Switch, null, React.createElement(Route, {
+    }, "Sample"))))), React.createElement(Switch, null, React.createElement(Route, {
       path: "/sample",
       exact: true,
       children: React.createElement(Sample, null)
-    }), React.createElement(Route, {
-      path: "/card",
-      exact: true,
-      children: React.createElement(Card, null)
-    }), React.createElement(Route, {
-      path: "/count",
-      exact: true,
-      children: React.createElement(Count, null)
     }))));
   };
 
